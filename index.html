@@ -16,12 +16,12 @@
 
           <!-- HEADER LOGOS -->
           <tr>
-            <td style="padding:30px 40px 10px 40px;text-align:center;">
+            <td style="padding:15px 40px 5px 40px;text-align:center;">
 
               <!-- LOGO CELESTINES -->
               <img
                 src="https://raw.githubusercontent.com/Guiomino/assets/refs/heads/main/Assets/Logo-Celestines-bd.png"
-                width="200"
+                width="350"
                 alt="Les Célestines Logo"
                 style="display:block;margin:0 auto 15px auto;"
               >
@@ -57,13 +57,25 @@
                 Présentation narrative et immersive de l’univers.
               </div>
 
-              <iframe
-                src="https://drive.google.com/file/d/1jg1QO1N4CBxsDEis-LW_3nUNa3WI4Cm5/preview"
-                width="100%"
-                height="140"
-                allow="autoplay"
-                style="border:0;border-radius:8px;">
-              </iframe>
+
+
+              <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css" />
+
+              <div style="max-width:100%;">
+                <audio id="player" controls>
+                  <source src="https://guiomino.github.io/BA-Les-Celestines//audios/CELESTINES_BANDE%20ANNONCE.mp3" type="audio/mpeg">
+                </audio>
+              </div>
+
+              <script src="https://cdn.plyr.io/3.7.8/plyr.polyfilled.js"></script>
+
+              <script>
+                document.addEventListener('DOMContentLoaded', () => {
+                  const player = new Plyr('#player');
+                });
+              </script>
+
+
 
             </td>
           </tr>
@@ -142,6 +154,10 @@
 
               <div style="font-size:11px;color:#777;">
                 AUTEUR D’UNIVERS AUDIO IMMERSIFS
+              </div>
+
+               <div style="font-size:10px;color:#777;margin:15px 10px 15px 10px;">
+                Copyright © 2026 – Guillaume ESTRADE - Guiomino - Tous droits réservés
               </div>
 
             </td>
