@@ -236,6 +236,68 @@ h2{
 
 
 
+
+
+.casting-block{
+  margin-bottom:12px;
+}
+
+/* DESKTOP */
+.voice-row{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  padding:4px 0;
+  font-size:13px;
+}
+
+.character{
+  font-weight:600;
+  white-space:nowrap;
+}
+
+.actor{
+  white-space:nowrap;
+  opacity:0.75;
+}
+
+/* ligne dynamique */
+.line{
+  flex:1;
+  border-bottom:1px solid rgba(255,255,255,0.2);
+  transform: translateY(1px);
+}
+
+/* =========================
+   MOBILE FIX
+========================= */
+@media (max-width: 900px){
+
+  .voice-row{
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
+    gap:2px;
+    padding:8px 0;
+  }
+
+  .line{
+    display:none;
+  }
+
+  .actor{
+    opacity:0.75;
+    white-space:normal;
+  }
+
+  .character{
+    white-space:normal;
+  }
+}
+
+
+
+
 /* =========================
    STAR FIELD BACKGROUND
 ========================= */
