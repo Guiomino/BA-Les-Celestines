@@ -2,172 +2,206 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>Univers audio immersif - Projet en cours</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IP Audio Sérialisée</title>
+
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css" />
 </head>
 
-<body style="margin:0;background:#f6f6f6;font-family:Arial,sans-serif;color:#212121;">
 
-  <table width="100%" cellpadding="0" cellspacing="0" style="padding:40px 0;">
-    <tr>
-      <td align="center">
+<body>
+  <div class="star-field" aria-hidden="true"></div>
 
-        <!-- CONTAINER -->
-        <table width="720" cellpadding="0" cellspacing="0" style="background:#ffffff;border-radius:10px;overflow:hidden;">
+<main class="page">
 
-          <!-- HEADER LOGOS -->
-          <tr>
-            <td style="padding:15px 40px 5px 40px;text-align:center;">
+  <!-- HEADER -->
+  <section class="card header">
 
-              <!-- LOGO CELESTINES -->
-              <img
-                src="https://raw.githubusercontent.com/Guiomino/assets/refs/heads/main/Assets/Logo-Celestines-bd.png"
-                width="350"
-                alt="Les Célestines Logo"
-                style="display:block;margin:0 auto 15px auto;"
-              >
+    <img
+      class="logo"
+      src="https://raw.githubusercontent.com/Guiomino/assets/refs/heads/main/Assets/Logo-Celestines-bd.png"
+      alt="Projet"
+    >
 
-              <div style="font-size:20px;font-weight:bold;">
-                Univers audio immersif
-              </div>
+    <h1>IP Audio Sérialisée – Jeunesse (5–8 ans)</h1>
 
-              <div style="margin-top:8px;color:#555;font-size:13px;line-height:1.5;">
-                Création d’histoires audio originales pour jeunes publics.<br>
-                Conception, écriture et production d’univers narratifs sérialisés.
-              </div>
+    <p class="subtitle">
+      Univers narratif conçu pour formats audio jeunesse.
+      <br>
+      Série immersive structurée autour d’un arc narratif continu.
+    </p>
 
-            </td>
-          </tr>
+  </section>
 
-          <!-- SEPARATOR -->
-          <tr>
-            <td style="padding:0 40px;">
-              <div style="border-top:1px solid #e6e6e6;"></div>
-            </td>
-          </tr>
+  <!-- AUDIO -->
+  <section class="card">
 
-          <!-- BANDE ANNONCE -->
-          <tr>
-            <td style="padding:25px 40px;">
+    <div class="section-title">Bande-annonce</div>
 
-              <div style="font-size:16px;font-weight:bold;margin-bottom:12px;color:#164F7D;">
-                Bande-annonce du projet
-              </div>
+    <p class="muted">Extrait représentatif du ton narratif et sonore.</p>
 
-              <div style="font-size:13px;color:#555;margin-bottom:15px;">
-                Présentation narrative et immersive de l’univers.
-              </div>
+    <div class="audio-box">
+      <audio id="player" controls>
+        <source src="https://guiomino.github.io/BA-Les-Celestines//audios/CELESTINES_BANDE%20ANNONCE.mp3" type="audio/mpeg">
+      </audio>
+    </div>
 
+  </section>
 
+  <!-- LOGLINE -->
+  <section class="card highlight">
 
-              <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css" />
+    <h2>LOGLINE</h2>
 
-              <div style="max-width:100%;">
-                <audio id="player" controls>
-                  <source src="https://guiomino.github.io/BA-Les-Celestines//audios/CELESTINES_BANDE%20ANNONCE.mp3" type="audio/mpeg">
-                </audio>
-              </div>
+    <p class="big">
+      Trois enfants découvrent une médiathèque secrète où chaque livre ouvre un monde sonore vivant, les entraînant dans une quête progressive autour d’un artefact ancien.
+    </p>
 
-              <script src="https://cdn.plyr.io/3.7.8/plyr.polyfilled.js"></script>
+  </section>
 
-              <script>
-                document.addEventListener('DOMContentLoaded', () => {
-                  const player = new Plyr('#player');
-                });
-              </script>
+  <!-- FORMAT -->
+  <section class="card center-block">
 
+    <div class="section-title">Format de production</div>
 
+    <div class="grid compact">
 
-            </td>
-          </tr>
+      <div class="mini-card">
+        <h3>Public</h3>
+        <p>5–8 ans</p>
+      </div>
 
-          <!-- PROJET -->
-          <tr>
-            <td style="padding:10px 40px 20px 40px;">
+      <div class="mini-card">
+        <h3>Format</h3>
+        <p>Série audio</p>
+      </div>
 
-              <div style="font-size:16px;font-weight:bold;margin-bottom:15px;">
-                Projet
-              </div>
+      <div class="mini-card">
+        <h3>Saison 1</h3>
+        <p>13 épisodes</p>
+      </div>
 
-              <div style="font-size:13px;line-height:1.7;color:#333;">
+      <div class="mini-card">
+        <h3>Durée</h3>
+        <p>13–14 min</p>
+      </div>
 
-                <strong>Un univers narratif sérialisé pour enfants (5 à 8 ans)</strong><br>
-                Une saga audio immersive mêlant narration, musique originale et sound design cinématographique.
+    </div>
 
-                <br><br>
+  </section>
 
-                <strong>Construction de l’univers</strong><br>
-                Personnages récurrents, arcs narratifs progressifs et exploration d’un monde audio structuré en épisodes.
+  <!-- STRUCTURE NARRATIVE (REWORKED) -->
+  <section class="card">
 
-                <br><br>
+    <div class="section-title">Structure narrative</div>
 
-                <strong>Format de production</strong><br>
-                Contenus courts conçus pour boîtes à histoires et plateformes audio jeunesse.
+    <div class="grid compact">
 
-              </div>
+      <div class="mini-card">
+        <h3>Épisode</h3>
+        <p>Mission autonome + continuité</p>
+      </div>
 
-            </td>
-          </tr>
+      <div class="mini-card">
+        <h3>Arc saison</h3>
+        <p>Progression en 13 chapitres</p>
+      </div>
 
-          <!-- ABOUT -->
-          <tr>
-            <td style="padding:10px 40px 20px 40px;">
+      <div class="mini-card">
+        <h3>Univers</h3>
+        <p>Exploration extensible</p>
+      </div>
 
-              <div style="font-size:16px;font-weight:bold;margin-bottom:10px;color:#164F7D;">
-                À propos
-              </div>
+      <div class="mini-card">
+        <h3>Rythme</h3>
+        <p>Cliffhanger narratif</p>
+      </div>
 
-              <div style="font-size:13px;line-height:1.7;color:#333;">
-                Auteur et créateur d’univers audio immersifs, spécialisé dans la narration pour enfants et la conception d’expériences sonores originales.
-                <br><br>
-                Travail sur l’écriture, la direction artistique sonore et la production d’univers narratifs complets.
-              </div>
+    </div>
 
-            </td>
-          </tr>
+  </section>
 
-          <!-- CTA -->
-          <tr>
-            <td style="padding:25px 40px 35px 40px;text-align:center;">
+  <!-- DIRECTION SONORE -->
+  <section class="card">
 
-              <div style="font-size:13px;color:#555;margin-bottom:15px;">
-                Dossier complet (épisodes, bande-son, personnages) disponible sur demande (B2B)
-              </div>
+    <div class="section-title">Direction sonore</div>
 
-              <a href="mailto:guillaumecharlesestrade@gmail.com?subject=Accès%20dossier%20univers%20audio"
-                 style="background:#164F7D;color:#fff;text-decoration:none;padding:12px 20px;border-radius:6px;font-size:13px;display:inline-block;">
-                Demander l’accès au dossier complet
-              </a>
+    <div class="grid compact">
 
-            </td>
-          </tr>
+      <div class="mini-card">
+        <h3>Narration</h3>
+        <p>Cinématographique immersive</p>
+      </div>
 
-          <!-- FOOTER LOGO -->
-          <tr>
-            <td style="padding:25px 40px;text-align:center;border-top:1px solid #eee;">
+      <div class="mini-card">
+        <h3>Musique</h3>
+        <p>Underscoring narratif adaptatif</p>
+      </div>
 
-              <img
-                src="https://raw.githubusercontent.com/Guiomino/assets/refs/heads/main/Assets/Logo-Guiomino.png"
-                width="140"
-                alt="Guillaume Estrade logo"
-                style="display:block;margin:0 auto 10px auto;"
-              >
+      <div class="mini-card">
+        <h3>Sound design</h3>
+        <p>Ambiances spatialisées</p>
+      </div>
 
-              <div style="font-size:11px;color:#777;">
-                AUTEUR D’UNIVERS AUDIO IMMERSIFS
-              </div>
+    </div>
 
-               <div style="font-size:10px;color:#777;margin:15px 10px 15px 10px;">
-                Copyright © 2026 – Guillaume ESTRADE - Guiomino - Tous droits réservés
-              </div>
+  </section>
 
-            </td>
-          </tr>
+  <!-- POSITIONING -->
+  <section class="card">
 
-        </table>
+    <div class="section-title">Positionnement</div>
 
-      </td>
-    </tr>
-  </table>
+    <div class="bullets">
+
+      <p>✔ Univers narratif structuré et extensible</p>
+      <p>✔ Format audio optimisé pour écoute enfant</p>
+      <p>✔ Production sérialisée cohérente</p>
+      <p>✔ Adaptable à différents formats de diffusion</p>
+
+    </div>
+
+  </section>
+
+  <!-- CTA -->
+  <section class="card cta">
+
+    <p class="muted">
+      Dossier complet disponible : bible d’univers, épisodes, direction sonore
+    </p>
+
+    <a class="button"
+       href="mailto:guillaumecharlesestrade@gmail.com?subject=Dossier%20IP%20Audio">
+      Demander le dossier B2B
+    </a>
+
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+
+    <img
+      src="https://raw.githubusercontent.com/Guiomino/assets/refs/heads/main/Assets/Logo-Guiomino-Blanc.png"
+      class="footer-logo"
+      alt="logo"
+    >
+
+    <p class="small">AUTEUR D’UNIVERS AUDIO IMMERSIFS</p>
+    <p class="tiny">Copyright © 2026 – Guillaume ESTRADE - Guiomino - Tous droits réservés</p>
+
+  </footer>
+
+</main>
+
+<script src="https://cdn.plyr.io/3.7.8/plyr.polyfilled.js"></script>
+<script>
+  new Plyr('#player');
+</script>
+
+<div class="star-field"></div>
+<script src="starfield.js"></script>
+
 
 </body>
 </html>

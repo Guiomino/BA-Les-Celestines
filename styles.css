@@ -1,0 +1,300 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+
+:root{
+    --bg-0:#070A12;   /* base deep night */
+  --bg-1:#0B1530;   /* blue shadow */
+  --bg-2:#121C3F;   /* mid layer */
+  --bg-accent:#1A2B5C; /* subtle glow zones */
+
+  --card:rgba(255,255,255,0.04);
+  --stroke:rgba(255,255,255,0.08);
+  --text:#EAF0FF;
+  --muted:rgba(234,240,255,0.7);
+  --accent:#6C7CFF;
+  --accent2:#9B6CFF;
+}
+
+*{
+  box-sizing:border-box;
+}
+
+body{
+  margin:0;
+  font-family:Inter, sans-serif;
+  color:var(--text);
+  line-height:1.6;
+
+  /* multi-layer cinematic background */
+   background:
+    radial-gradient(circle at 20% 10%, rgba(108,124,255,0.12), transparent 50%),
+    radial-gradient(circle at 80% 90%, rgba(196, 108, 255, 0.15), transparent 55%),
+    radial-gradient(circle at top, rgba(26,43,92,0.6), transparent 60%),
+    linear-gradient(180deg, #0B1530 0%, #070A12 65%, #0A1638 100%);
+}
+
+/* PAGE */
+.page{
+  max-width:900px;
+  margin:0 auto;
+  padding:60px 20px;
+}
+
+/* CARD SYSTEM */
+.card{
+  background:var(--card);
+  border:1px solid var(--stroke);
+  border-radius:16px;
+  padding:22px;
+  margin-bottom:16px;
+  backdrop-filter: blur(10px);
+}
+
+/* HEADER */
+.header{
+  text-align:center;
+  padding:40px 22px;
+}
+
+.logo{
+  width:320px;
+  max-width:90%;
+  margin-bottom:10px;
+}
+
+.footer-note{
+  font-size:11px;
+  opacity:0.7;
+  margin-bottom:12px;
+  line-height:1.4;
+}
+
+/* TYPOGRAPHY */
+h1{
+  font-size:28px;
+  margin:10px 0;
+  line-height:1.3;
+}
+
+h2{
+  font-size:18px;
+  margin-bottom:10px;
+}
+
+.subtitle{
+  font-size:13px;
+  color:var(--muted);
+}
+
+.muted{
+  font-size:13px;
+  color:var(--muted);
+}
+
+/* SECTION LABEL */
+.section-title{
+  font-size:14px;
+  letter-spacing:1.2px;
+  text-transform:uppercase;
+  color:rgba(255, 214, 170, 0.75);
+  margin-bottom:10px;
+}
+
+/* AUDIO */
+.audio-box{
+  margin-top:10px;
+}
+
+.plyr{
+  border-radius:12px;
+}
+
+/* LOGLINE (HIGHLIGHT IMPORTANT) */
+.highlight{
+  text-align:center;
+  background:rgba(108,124,255,0.08);
+}
+
+.big{
+  font-size:16px;
+  line-height:1.6;
+  margin-top:10px;
+}
+
+/* GRID SYSTEM */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:12px;
+  margin-top:15px;
+}
+
+/* compact version (used for B2B sections) */
+.compact{
+  grid-template-columns:repeat(4, minmax(0,1fr));
+  max-width:720px;
+  margin:15px auto 0;
+}
+
+/* MINI CARDS */
+.mini-card{
+  padding:12px;
+  border-radius:12px;
+  background:rgba(255,255,255,0.03);
+  border:1px solid rgba(255,255,255,0.08);
+}
+
+.mini-card h3{
+  font-size:11px;
+  margin:0 0 6px;
+  opacity:0.7;
+}
+
+.mini-card p{
+  margin:0;
+  font-size:13px;
+}
+
+/* BULLETS */
+.bullets p{
+  margin:6px 0;
+}
+
+/* CTA */
+.cta{
+  text-align:center;
+}
+
+
+
+.button{
+  position:relative;
+  display:inline-block;
+  margin-top:10px;
+  padding:14px 20px;
+  border-radius:12px;
+  color:white;
+  text-decoration:none;
+  font-weight:600;
+  overflow:hidden;
+  z-index:1;
+}
+
+/* couche de fond */
+.button::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(135deg,var(--accent),var(--accent2));
+  transition:opacity 0.35s ease;
+  z-index:-1;
+}
+
+/* hover fade réel */
+.button:hover::before{
+  opacity:0.85;
+}
+
+
+
+/* FOOTER */
+.footer{
+  text-align:center;
+  margin-top:40px;
+  opacity:0.8;
+}
+
+.footer-logo{
+  width:110px;
+  margin-bottom:10px;
+}
+
+.small{
+  font-size:11px;
+}
+
+.tiny{
+  font-size:10px;
+  opacity:0.6;
+}
+
+/* RESPONSIVE */
+@media (max-width:900px){
+  .grid{
+    grid-template-columns:1fr;
+  }
+
+  .compact{
+    grid-template-columns:1fr;
+    max-width:100%;
+  }
+
+  h1{
+    font-size:22px;
+  }
+}
+
+
+
+
+/* =========================
+   STAR FIELD BACKGROUND
+========================= */
+
+.star-field {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+/* contenu au-dessus */
+.page {
+  position: relative;
+  z-index: 1;
+}
+
+/* wrapper (IMPORTANT pour éviter conflit transform) */
+.star-wrapper {
+  position: absolute;
+}
+
+/* étoile */
+.star {
+  width: 10px;
+  height: 10px;
+  opacity: 0.85;
+  display: block;
+  filter: drop-shadow(0 0 3px rgba(255, 255, 255, 0.4));
+  animation: twinkle 4s infinite ease-in-out;
+}
+
+/* tailles */
+.star.small {
+  width: 7px;
+  height: 7px;
+  opacity: 0.6;
+}
+
+.star.medium {
+  width: 11px;
+  height: 11px;
+}
+
+.star.large {
+  width: 15px;
+  height: 15px;
+  opacity: 0.9;
+}
+
+/* scintillement */
+@keyframes twinkle {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+}
