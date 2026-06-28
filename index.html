@@ -21,7 +21,7 @@
     <img
       class="logo"
       src="https://raw.githubusercontent.com/Guiomino/assets/refs/heads/main/Assets/Logo-Celestines-bd.png"
-      alt="Projet"
+      alt="Logo des Célestines"
     >
 
     <h1>IP Audio Sérialisée – Jeunesse (5–8 ans)</h1>
@@ -34,20 +34,22 @@
 
   </section>
 
+
   <!-- AUDIO -->
   <section class="card reveal">
 
-    <div class="section-title">Bande-annonce</div>
+    <div class="section-title" id="audio-title">Bande-annonce</div>
 
     <p class="muted">Extrait représentatif du ton narratif et sonore.</p>
 
     <div class="audio-box">
-      <audio id="player" controls>
+      <audio id="player" controls aria-labelledby="audio-title">
         <source src="https://guiomino.github.io/BA-Les-Celestines//audios/CELESTINES_BANDE%20ANNONCE.mp3" type="audio/mpeg">
       </audio>
     </div>
 
   </section>
+
 
   <!-- LOGLINE -->
   <section class="card highlight reveal">
@@ -58,7 +60,15 @@
       Trois enfants découvrent une médiathèque secrète où chaque livre ouvre un monde sonore vivant, les entraînant dans une quête progressive autour d’un artefact ancien.
     </p>
 
+      <a class="button"
+     href="mailto:guillaumecharlesestrade@gmail.com?subject=B2B%20-%20Les%20C%C3%A9lestines%20%7C%20Demande%20de%20dossier">
+      Demander l’accès au dossier
+    </a>
+    <p class="tiny">IP audio – dossier complet (univers, narration, design sonore)</p>
+
   </section>
+
+
 
   <!-- FORMAT -->
   <section class="card center-block reveal">
@@ -511,15 +521,21 @@
   <section class="card cta reveal">
 
     <p class="muted">
-      Dossier complet disponible : bible d’univers, épisodes, direction sonore
+      Dossier de présentation disponible sur demande : bible d’univers, épisodes, direction sonore
     </p>
 
     <a class="button"
-       href="mailto:guillaumecharlesestrade@gmail.com?subject=Dossier%20IP%20Audio">
-      Demander le dossier B2B
+      href="mailto:guillaumecharlesestrade@gmail.com?subject=B2B%20-%20Les%20C%C3%A9lestines%20%7C%20Demande%20de%20dossier">
+      Demander l’accès au dossier
     </a>
 
+    <p class="tiny">
+      Transmission sur échange professionnel uniquement
+    </p>
+
   </section>
+
+  
 
   <!-- FOOTER -->
   <footer class="footer reveal">
@@ -539,7 +555,15 @@
 
   <script src="https://cdn.plyr.io/3.7.8/plyr.polyfilled.js"></script>
   <script>
-    new Plyr('#player');
+    new Plyr('#player', {
+      controls: [
+        'play',
+        'progress',
+        'current-time',
+        'mute',
+        'volume'
+      ]
+    });
   </script>
 
   <div class="star-field" aria-hidden="true"></div>

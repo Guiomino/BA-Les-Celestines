@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
 
 :root{
-    --bg-0:#070A12;   /* base deep night */
+  --bg-0:#070A12;   /* base deep night */
   --bg-1:#0B1530;   /* blue shadow */
   --bg-2:#121C3F;   /* mid layer */
   --bg-accent:#1A2B5C; /* subtle glow zones */
@@ -12,6 +12,8 @@
   --muted:rgba(234,240,255,0.7);
   --accent:#6C7CFF;
   --accent2:#9B6CFF;
+
+  --plyr-color-main: rgba(138, 123, 255, 0.9);
 }
 
 
@@ -105,9 +107,12 @@ h2{
   margin-top:10px;
 }
 
+
 .plyr{
   border-radius:12px;
 }
+
+
 
 /* LOGLINE (HIGHLIGHT IMPORTANT) */
 .highlight{
