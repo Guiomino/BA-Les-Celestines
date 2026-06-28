@@ -14,6 +14,7 @@
   --accent2:#9B6CFF;
 }
 
+
 *{
   box-sizing:border-box;
 }
@@ -111,7 +112,7 @@ h2{
 /* LOGLINE (HIGHLIGHT IMPORTANT) */
 .highlight{
   text-align:center;
-  background:rgba(108,124,255,0.08);
+  background:rgba(108,124,255,0.1);
 }
 
 .big{
@@ -146,7 +147,7 @@ h2{
 .mini-card h3{
   font-size:11px;
   margin:0 0 6px;
-  opacity:0.7;
+  color:rgba(255, 214, 170, 0.75);
 }
 
 .mini-card p{
@@ -293,6 +294,81 @@ h2{
   .character{
     white-space:normal;
   }
+}
+
+
+
+
+/* PEARLS*/
+.pearl-dot{
+  width:8px;
+  height:8px;
+  border-radius:50%;
+
+  background: radial-gradient(circle at 30% 30%,
+    #ffffff 0%,
+    #d7c7ff 35%,
+    #8a7bff 70%,
+    #4a3cff 100%);
+
+  box-shadow:
+    0 0 6px rgba(138,123,255,0.6),
+    0 0 12px rgba(138,123,255,0.25);
+
+  display:inline-block;
+
+  animation: pearlFloat 3.8s ease-in-out infinite;
+  transform-origin:center;
+}
+
+.mini-title{
+  display:flex;
+  align-items:center;
+  gap:8px;
+}
+
+@keyframes pearlFloat{
+  0%{
+    transform: translateY(0) scale(1) rotate(0deg);
+    filter: brightness(1);
+  }
+
+  25%{
+    transform: translateY(-1px) scale(1.05) rotate(6deg);
+    filter: brightness(1.15);
+  }
+
+  50%{
+    transform: translateY(1px) scale(1) rotate(-4deg);
+    filter: brightness(0.95);
+  }
+
+  75%{
+    transform: translateY(-2px) scale(1.05) rotate(3deg);
+    filter: brightness(1.2);
+  }
+
+  100%{
+    transform: translateY(0) scale(1) rotate(0deg);
+    filter: brightness(1);
+  }
+}
+
+
+
+
+
+/* REVEAL */
+.reveal{
+  opacity:0;
+  transform: translateY(18px);
+  transition: opacity 1.5s ease, transform 0.8s ease;
+  will-change: opacity, transform;
+}
+
+.reveal.visible{
+  opacity:1;
+  transform: translateY(0);
 }
 
 
